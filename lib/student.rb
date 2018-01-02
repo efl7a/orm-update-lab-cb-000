@@ -46,6 +46,12 @@ class Student
     end
   end
 
+  def self.create(name, grade)
+    self.new(name, grade)
+
+  end
+
+
   def update
     sql = <<-SQL
       UPDATE students SET name = ?, grade = ? WHERE id = ?
